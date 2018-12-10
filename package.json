@@ -1,14 +1,26 @@
 {
   "name": "throttle-transfer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/jasmine/bin/jasmine test/test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jasmine": "^3.3.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slwzero/throttle-transfer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slwzero/throttle-transfer/issues"
+  },
+  "homepage": "https://github.com/slwzero/throttle-transfer#readme",
+  "description": ""
 }
