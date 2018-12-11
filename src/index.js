@@ -10,14 +10,14 @@ function throttleTransfer(fn, time, firstCallWait) {
         if (!wait) {
             wait = true
             tm = setTimeout(function () {
-                fn.apply(context,args)
                 tm = null
                 wait = false
+                return fn.apply(context,args)
             }, time);
         }
         if (callNow) {
-            fn.apply(context,args)
             callNow = false
+            return fn.apply(context,args)
         }
     }
 }
