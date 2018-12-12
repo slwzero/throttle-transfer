@@ -1,6 +1,6 @@
 {
   "name": "throttle-transfer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "src/index.js",
   "scripts": {
     "test": "node node_modules/jasmine/bin/jasmine test/test.js"

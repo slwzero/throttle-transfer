@@ -17,7 +17,7 @@ $ npm install throttle-transfer --save
 ```js
 const throttleTransfer = require('throttle-transfer')
 const throttle = throttleTransfer(fn, 500, false) 
-// false means  excute fn immediately and then every 500ms
+// false means  excute fn immediately and then every 500ms;  true means excute fn after 500ms and then every 500ms
 function fn(a) {
   console.log(a)
 }
@@ -25,10 +25,11 @@ function fn(a) {
 throttle('hi') // log 'hi' immediately, no delay.
 throttle('hi2') // log 'hi2' after 500ms.
 ```
-**first excute with throttle:**
+**excute with throttle:**
 ```js
 const throttleTransfer = require('throttle-transfer')
 const throttle = throttleTransfer(fn, 500, true)
+
 
 function fn(a) {
   console.log(a)
@@ -49,6 +50,7 @@ window.onresize = throttle
 
 // log 'true' when resizing the window
 
+```
 
 # API
 

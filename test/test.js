@@ -14,7 +14,6 @@ describe('First call immediately', function () {
     })
 
     it('first call', function () {
-        firstCallWait = false
         throttle()
         jasmine.clock().tick(300)
         expect(fn).toHaveBeenCalledTimes(1)
@@ -24,7 +23,8 @@ describe('First call immediately', function () {
     })
 
     it('multiple call', function () {
-        firstCallWait = false
+        throttle()
+        throttle()
         throttle()
         throttle()
         expect(fn).toHaveBeenCalledTimes(1)
