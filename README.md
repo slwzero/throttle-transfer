@@ -1,6 +1,6 @@
 # throttle-transfer
 
-  [!Build Status](https://github.com/slwzero/throttle-transfer)
+[Build Status](https://github.com/slwzero/throttle-transfer)
 
 Wrap function into a throttle function.
 
@@ -12,23 +12,37 @@ $ npm install throttle-transfer --save
 # Usage
 
 **throttle:**
+```js
+const throttleTransfer = require('throttle-transfer')
+const throttle = throttleTransfer(fn, 600, true) 
+// true means excute fn after 600ms and then every 600ms
+// false means excute fn immediately and then every 600ms; 
+
+function fn(a) {
+  console.log(a)
+}
+
+debounce('hi') 
+debounce('hi') 
+// log 'hi' once after 600ms.
+```
 
 **excute immediately, then throttle:**
 ```js
 const throttleTransfer = require('throttle-transfer')
-const throttle = throttleTransfer(fn, 500, false) 
-// false means  excute fn immediately and then every 500ms;  true means excute fn after 500ms and then every 500ms
+const throttle = throttleTransfer(fn, 600, false) 
+
 function fn(a) {
   console.log(a)
 }
 
 throttle('hi') // log 'hi' immediately, no delay.
-throttle('hi2') // log 'hi2' after 500ms.
+throttle('hi2') // log 'hi2' after 600ms.
 ```
 **excute with throttle:**
 ```js
 const throttleTransfer = require('throttle-transfer')
-const throttle = throttleTransfer(fn, 500, true)
+const throttle = throttleTransfer(fn, 600, true)
 
 
 function fn(a) {
@@ -36,7 +50,7 @@ function fn(a) {
 }
 
 throttle('hi') 
-throttle('hi2') // log 'hi2' after 500ms.
+throttle('hi2') // log 'hi2' after 600ms.
 ```
 
 **bind this:**
@@ -44,7 +58,7 @@ throttle('hi2') // log 'hi2' after 500ms.
 const throttleTransfer = require('throttle-transfer')
 const throttle = throttleTransfer(function () {
   console.log(this === window)
-}, 500, true)
+}, 600, true)
 
 window.onresize = throttle
 
