@@ -1,6 +1,7 @@
 # throttle-transfer
 
-[Build Status](https://github.com/slwzero/throttle-transfer)
+
+[![Build Status](https://travis-ci.com/slwzero/throttle-transfer.svg?branch=master)](https://travis-ci.com/slwzero/throttle-transfer)
 
 Wrap function into a throttle function.
 
