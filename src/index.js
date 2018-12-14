@@ -1,6 +1,6 @@
 
 function throttleTransfer(fn, time, firstCallWait) {
-    var time = time || 1400
+    var time = time || 600
     var wait = false
     var firstCallWait = firstCallWait || false
     var callNow = !firstCallWait && !wait
